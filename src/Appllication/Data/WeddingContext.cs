@@ -1,7 +1,7 @@
 ﻿using Domain.Model;
 using Microsoft.EntityFrameworkCore;
 
-namespace Appllication.Data;
+namespace Application.Data;
 
 public class WeddingContext : DbContext
 {
