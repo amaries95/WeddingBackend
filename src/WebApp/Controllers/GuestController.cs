@@ -1,4 +1,4 @@
-﻿using Application.Contracts;
+﻿using Application.Contracts.Guest;
 using Application.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

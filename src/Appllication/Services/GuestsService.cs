@@ -1,4 +1,4 @@
-﻿using Application.Contracts;
+﻿using Application.Contracts.Guest;
 using Application.Data;
 using Domain.Model;
 using Microsoft.EntityFrameworkCore;

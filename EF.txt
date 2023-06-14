@@ -1,0 +1,3 @@
+dotnet ef migrations add --startup-project ..\WebApp\API.csproj "Add Login Table"
+
+dotnet ef database update --startup-project ..\WebApp\API.csproj

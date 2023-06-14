@@ -1,4 +1,4 @@
-﻿using Application.Contracts;
+﻿using Application.Contracts.Views;
 using Application.Data;
 using Domain.Model;
 using Microsoft.EntityFrameworkCore;
@@ -31,7 +31,7 @@ namespace Application.Services
                 };
 
                 _context.Views.Add(view);
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync(); // maybe I can delete this
 
                 return;
             }

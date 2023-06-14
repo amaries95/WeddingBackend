@@ -1,6 +1,6 @@
 ﻿using Domain.Model;
 
-namespace Application.Contracts
+namespace Application.Contracts.Views
 {
     public class ViewsResponse : View
     {
