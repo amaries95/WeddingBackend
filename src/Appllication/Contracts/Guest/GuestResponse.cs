@@ -1,7 +1,5 @@
-﻿using Domain.Model;
+﻿namespace Application.Contracts.Guest;
 
-namespace Application.Contracts.Guest;
-
-public class GuestResponse : Guest
+public class GuestResponse : Domain.Model.Guest
 {
 }
