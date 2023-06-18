@@ -1,9 +1,12 @@
 ﻿using Application.Contracts.User;
 using Application.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     public class UserController : Controller
     {
         private readonly UserService _userService;
@@ -13,6 +16,7 @@ namespace API.Controllers
             _userService = userService;
         }
 
+        [Authorize]
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] UserRequest userRegisterRequest)
         {

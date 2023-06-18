@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     public class ViewsController : Controller
     {
         private readonly ViewsService _viewsService;
@@ -14,7 +16,7 @@ namespace API.Controllers
         }
 
         [Authorize]
-        [HttpGet("/getAll")]
+        [HttpGet("getAll")]
         public async Task<IActionResult> GetAllViews()
         {
             var numberOfViews = await _viewsService.GetViews();
@@ -22,7 +24,7 @@ namespace API.Controllers
             return Ok(numberOfViews);
         }
 
-        [HttpPost]
+        [HttpPost("increaseViews")]
         public async Task<IActionResult> IncreaseViews()
         {
             await _viewsService.UpdateViews();

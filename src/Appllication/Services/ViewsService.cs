@@ -16,7 +16,7 @@ namespace Application.Services
 
         public async Task<ViewsResponse> GetViews()
         {
-            var result = await _context.Views.FirstAsync();
+            var result = await _context.Views.FirstOrDefaultAsync();
 
             return new ViewsResponse { NumberOfViews = result.NumberOfViews };
         }
