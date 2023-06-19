@@ -15,7 +15,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(myPolicy,
         builder =>
         {
-            builder.WithOrigins("*") // for testing purpose only....to be changed when finishing the logic
+            builder.WithOrigins("http://192.168.1.133", "https://192.168.1.133") // for testing purpose only....to be changed when finishing the logic
                 .WithMethods("GET", "POST", "DELETE", "PATCH", "PUT")
                 .AllowAnyHeader();
         });
