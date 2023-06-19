@@ -7,9 +7,19 @@ using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
+var myPolicy = "WeddingPolicy";
 
 // Add services to the container.
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(myPolicy,
+        builder =>
+        {
+            builder.WithOrigins("*") // for testing purpose only....to be changed when finishing the logic
+                .WithMethods("GET", "POST", "DELETE", "PATCH", "PUT")
+                .AllowAnyHeader();
+        });
+});
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
