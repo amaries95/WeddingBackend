@@ -99,7 +99,7 @@ public class UserService
         SecurityTokenDescriptor securityTokenDescriptor = new SecurityTokenDescriptor
         {
             Subject = new ClaimsIdentity(claims),
-            Expires = DateTime.Now.AddDays(3),
+            Expires = DateTime.Now.AddDays(30),
             SigningCredentials = credentials
         };
 

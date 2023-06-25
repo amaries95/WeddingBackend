@@ -16,7 +16,7 @@ public class GuestController : Controller
         this._guestsService = guestsService;
     }
 
-    [HttpPost("/newGuest")]
+    [HttpPost("newGuest")]
     public async Task<IActionResult> AddNewGuest([FromBody] GuestRequest guestRequest)
     {
         var guestId = await _guestsService.AddNewGuest(guestRequest);
