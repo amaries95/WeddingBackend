@@ -6,7 +6,9 @@ public class GuestRequest
 
     public int NumberOfGuests { get; set; }
 
-    public bool IsVegetarian { get; set; }
+    public bool IsComing { get; set; }
+
+    public int NumberOfVeggiesMenus { get; set; }
 
     public string OtherDetails { get; set; }
 }
