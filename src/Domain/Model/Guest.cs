@@ -10,7 +10,7 @@ public class Guest
 
     public bool IsComing { get; set; }
 
-    public int NumberOfVeggiesMenus { get; set; }
+    public string TypesOfMenu { get; set; }
 
     public string OtherDetails { get; set; }
 }

@@ -37,7 +37,7 @@ public class GuestsService
         {
             Name = guestRequest.Name,
             IsComing = guestRequest.IsComing,
-            NumberOfVeggiesMenus = guestRequest.NumberOfVeggiesMenus,
+            TypesOfMenu = guestRequest.TypesOfMenu,
             NumberOfGuests = guestRequest.NumberOfGuests,
             OtherDetails = guestRequest.OtherDetails
         };
@@ -49,7 +49,7 @@ public class GuestsService
         {
             Id = guest.Id,
             Name = guest.Name,
-            NumberOfVeggiesMenus = guest.NumberOfVeggiesMenus,
+            TypesOfMenu = guest.TypesOfMenu,
             IsComing = guest.IsComing,
             OtherDetails = guest.OtherDetails,
             NumberOfGuests = guest.NumberOfGuests

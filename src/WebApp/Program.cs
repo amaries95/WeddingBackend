@@ -13,9 +13,9 @@ var myPolicy = "WeddingPolicy";
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(myPolicy,
-        builder =>
+        cfg =>
         {
-            builder.AllowAnyOrigin()
+            cfg.WithOrigins("https://alexandrii.com")
                 .AllowAnyHeader()
                 .AllowAnyMethod();
         });
